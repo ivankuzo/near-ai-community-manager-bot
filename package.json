@@ -1,0 +1,31 @@
+{
+  "name": "near-ai-community-manager-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/app.ts",
+    "start": "NODE_ENV=prod node -r tsconfig-paths/register dist/src/app.js",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "config": "^3.3.9",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.2",
+    "openai": "^4.20.1",
+    "telegraf": "^4.15.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/config": "^3.3.3",
+    "@types/node": "^20.10.3",
+    "prettier": "^3.1.0",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.2"
+  }
+}
