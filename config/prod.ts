@@ -1,5 +1,5 @@
 import dotenv from 'dotenv'
-dotenv.config({ path: '.env.dev' })
+dotenv.config({ path: '.env' })
 
 const {
     MONGO_URI,
