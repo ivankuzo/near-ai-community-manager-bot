@@ -21,7 +21,7 @@ export default (ctx: Context, next: () => Promise<void>) => {
             .toLowerCase()
 
         if (chatType !== 'private' && !message.startsWith(botActivationKeyword))
-            return
+            return next()
 
         const now = Date.now()
         const timestamps = users.get(userId) || []
