@@ -7,5 +7,3 @@ export const toolFunctions: { [key: string]: ToolFunction } = {
     getTokenPrice,
     getMessageHistory,
 }
-
-//getMessageHistory,

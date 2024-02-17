@@ -20,6 +20,7 @@ import RoomModel from 'models/room.model'
 import ChatModel from 'models/chat.model'
 import MessageModel from 'models/message.model'
 import { messageWithDetails } from 'utils/bot.utils'
+import rateLimitOnTextMiddleware from 'middleware/rateLimitOnText.middleware'
 
 const BOT_NAME = config.get<string>('BOT_NAME')
 
@@ -62,7 +63,7 @@ const newChatMembersHandler = (bot: Telegraf) => {
 }
 
 const textHandler = (bot: Telegraf) => {
-    bot.on('text', async ctx => {
+    bot.on('text', rateLimitOnTextMiddleware, async ctx => {
         try {
             const chatId = ctx.chat.id
             const chatType = ctx.chat.type
